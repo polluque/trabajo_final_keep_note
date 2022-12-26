@@ -36,28 +36,34 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20.0,
             ),
-            StreamBuilder<QuerySnapshot>(
-              stream: FirebaseFirestore.instance.collection('notes').snapshots(),
-              builder:(context, AsyncSnapshot snapshot) {
-                  // validando la conexion a firebase 
-                  if(snapshot.connectionState == ConnectionState.waiting){
-                    return Center(
-                      child: CircularProgressIndicator(),
-                    );
-                  }
-                  if (snapshot.hasData){
-                    return GridView(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2),
-                        children: 
-                        snapshot.data!.map((note) => noteCard(() {}, note)),
-                        );
-                  }
-                return Text('no exiten notas', style: GoogleFonts.nunito(color: Colors.white),);
-              },
+            Expanded(
+              child: StreamBuilder<QuerySnapshot>(
+                stream: FirebaseFirestore.instance.collection('notes').snapshots(),
+                builder:(context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                    // validando la conexion a firebase 
+                    if(snapshot.connectionState == ConnectionState.waiting){
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                    if (snapshot.hasData){
+                      return GridView(
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2),
+                          children: snapshot.data!.docs.map((note) => noteCard(() {}, note)).toList(),
+                          );
+                    }
+                  return Text('no exiten notas', style: GoogleFonts.nunito(color: Colors.white),);
+                },
+              ),
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {}, 
+        label: Text('add note'),
+        icon: Icon(Icons.add),
       ),
     );
   }

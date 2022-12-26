@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "671244701577",
+    "project_id": "flutterfirenotes-5ec40",
+    "storage_bucket": "flutterfirenotes-5ec40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671244701577:android:9f744cd4c5382db3e91b58",
+        "android_client_info": {
+          "package_name": "com.polluque.trabajo_final_keep_note"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671244701577-e89f8p3tf4ccu5mp6o81lgda92pvq2p5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlXj9lr5WNYRgWaQ42rEqPvYN5B8JjSOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671244701577-e89f8p3tf4ccu5mp6o81lgda92pvq2p5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

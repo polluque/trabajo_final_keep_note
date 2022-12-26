@@ -12,7 +12,9 @@ Widget noteCard(Function()? onTap, QueryDocumentSnapshot doc) {
       color: AppStyle.cardsColor[doc['color_id']],
       borderRadius: BorderRadius.circular(8.0),
     ),
-    child: Column(
+    child: 
+    /////
+    Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
@@ -32,6 +34,7 @@ Widget noteCard(Function()? onTap, QueryDocumentSnapshot doc) {
         ),
       ],
     ),
+    //////////
   ),
   );
 }

@@ -25,8 +25,8 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
           backgroundColor: AppStyle.cardsColor[color_id],
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.black),
-          title: Text('add new note', 
-          style: TextStyle(color: Colors.black),
+          title: Text('Añadir Nueva Nota', 
+          style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
           ),
         ),
         body: Padding(
@@ -38,7 +38,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                 controller: _titleController,
                 decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintText: 'Note Title',
+                  hintText: 'Titulo',
                 ),
                 style: AppStyle.mainTitle,
               ),
@@ -51,7 +51,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                 maxLines: null,
                 decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintText: 'Note content',
+                  hintText: 'Contenido de la Nota',
                 ),
                 style: AppStyle.mainContent,
               ),

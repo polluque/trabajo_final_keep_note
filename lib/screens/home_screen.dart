@@ -19,10 +19,11 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: AppStyle.mainColor,
       appBar: AppBar(
         elevation: 0.0,
-        title: Text('FireNotes'),
+        title: Text('Kepp Notes'),
         centerTitle: true,
         backgroundColor: AppStyle.mainColor        
       ),
+      
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'tus notas recientes paul', 
+              'Hola, Estas son tus Notas mas Recientes', 
               style: GoogleFonts.roboto(color: Colors.white, fontWeight: FontWeight.bold, 
               fontSize: 22,
               ),
@@ -73,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.push(context, 
           MaterialPageRoute(builder: (context) => NoteEditorScreen()));
         }, 
-        label: Text('add note'),
+        label: Text('Añadir Nota'),
         icon: Icon(Icons.add),
       ),
     );
